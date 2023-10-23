@@ -34,9 +34,12 @@ ul{
     display: flex;
     align-items: center;
 }
+
+.menu-item{
+    padding: 20px;
+}
 .menu-item+ .menu-item{
     border-left: 1px solid;
-    padding: 20px;
 }
 
 @media screen and (max-width: 767px) {
@@ -46,6 +49,11 @@ ul{
     .menu{
         display: block;
     }
+
+     .menu-item{
+    padding: 10px;
+    border-bottom: 1px solid;
+     }
     .menu-item+ .menu-item{
         border-bottom: 1px solid;
         padding: 10px;
