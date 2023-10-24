@@ -45,6 +45,7 @@ ul{
 @media screen and (max-width: 767px) {
     header{
         display: block;
+        padding: 0 16px;
     }
     .menu{
         display: block;
@@ -56,6 +57,7 @@ ul{
      }
     .menu-item+ .menu-item{
         border-bottom: 1px solid;
+        border-left: none;
         padding: 10px;
     }
 
