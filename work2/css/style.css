@@ -1,0 +1,38 @@
+body{
+    background-color: #eeeeee ;
+}
+.title{
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 30px;
+    color: rgb(55, 151, 152);
+}
+div{
+    max-width: 960px;
+    margin: 0 auto;
+}
+ul{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    margin: 10px;
+    gap: 20px
+}
+li{
+    background-color: white;
+}
+.section-title{
+    margin: 10px;
+    border-left: 7px solid;
+    color: rgb(55, 151, 152);
+}
+@media screen and ( max-width: 767px ){
+    ul{
+        display: block;
+        margin: 0 auto;
+    }
+    li{
+        width: 330px;
+    }
+}
