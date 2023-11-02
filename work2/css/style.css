@@ -27,12 +27,16 @@ li{
     border-left: 7px solid;
     color: rgb(55, 151, 152);
 }
-@media screen and ( max-width: 767px ){
+@media screen and ( max-width: 400px ){
     ul{
         display: block;
+        justify-content: center;
         margin: 0 auto;
+        margin: 10px;
     }
     li{
-        width: 330px;
+        width: 100%;
+        margin: 20px;
+        
     }
 }
