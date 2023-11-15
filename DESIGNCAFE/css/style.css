@@ -10,6 +10,7 @@ body{
     padding: 10px 7% 0 2.7%;
     position: absolute;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .logo img{
@@ -34,30 +35,6 @@ body{
 .slider{
     width: 100%;
 }
-#about{
-    display: flex;
-    max-width: 1000px;
-    padding: 0 10px;
-    text-align: center;
-    margin: 0 auto;
-}
-.about-img{
-    border-bottom-right-radius: 69px;
-    width:272.39px
-}
-.about-title{
-    width: 272px;
-    padding: 72px;
-}
-.about-lead{
-    font-size: 44px;
-    padding-left: 72px;
-}
-.about-text{
-    font-size: 16px;
-    padding-left: 72px;
-    padding-top: 36px;
-}
 .lead-text01{
     text-align: center;
     margin: 60px;
@@ -71,6 +48,34 @@ body{
     text-align: center;
     margin: 30px;
     padding-bottom: 100px;
+}
+#about{
+    display: flex;
+    max-width: 1000px;
+    padding: 0 10px;
+    text-align: center;
+    margin: 0 auto;
+}
+.about-img{
+    border-bottom-right-radius: 69px;
+    width: 50%;
+}
+.about-item{
+    padding-left: 72px;
+    text-align: left;
+}
+.about-title{
+    width: 272px;
+    padding-bottom: 72px;
+    align-items: center;
+}
+.about-lead{
+    font-size: 44px;
+    text-align: left;
+}
+.about-text{
+    font-size: 16px;
+    padding-top: 36px;
 }
 #menu{
     max-width: 1000px;
@@ -102,8 +107,6 @@ h3{
     margin-bottom: 17px;
 }
 #gallery{
-    max-width: 1000px;
-    padding: 0 10px;
     text-align: center;
     margin: 0 auto;
 }
@@ -114,6 +117,7 @@ h3{
 }
 .slider-img{
     display: flex;
+    width: 20%;
 }
 #event{
     max-width: 1000px;
@@ -127,12 +131,16 @@ h3{
     width: 173px;
 }
 .event-item {
-    display: flex;
     text-align: center;
     margin: 0 auto;
+    padding: 40px 160px;
     background-color: #fff;
     border: 3.68px solid #4F260B;
-
+}
+.event-item li{
+    display: flex;
+    gap: 50px;
+    padding-bottom: 24px;
 }
 .event-item a{
     border-bottom: 1px solid #4F260B;
@@ -154,17 +162,26 @@ iframe{
 footer{
     background-color: #fff;
 }
-.logo-footter{
-    width: 265px;
-}
-.designcafe-imfo{
+.footter-item{
     display: flex;
     max-width: 1000px;
-    padding: 0 10px;
-    text-align: center;
     margin: 0 auto;
+    padding-top: 82px;
+}
+.logo-footter{
+    width: 226px;
+}
+.designcafe-imfo{
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+}
+.designcafe-imfo p{
+    line-height: 1.95;
 }
 .copyright{
+    max-width: 1000px;
+    margin: 0 auto;
     padding-top: 80px;
     padding-bottom: 79px;
     text-align: center;
