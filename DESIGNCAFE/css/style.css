@@ -99,6 +99,9 @@ body{
     display: flex;
     gap: 48px;
 }
+.menu-item li{
+    text-align: left;
+}
 h3{
     font-size: 38px;
     color: #D30202;
@@ -146,7 +149,6 @@ h3{
     border-bottom: 1px solid #4F260B;
 }
 #access{
-    padding: 0 10px;
     text-align: center;
     margin: 0 auto;
 }
@@ -158,6 +160,7 @@ h3{
 iframe{
     width: 100%;
     margin: 0 auto;
+    vertical-align: bottom;
 }
 footer{
     background-color: #fff;
@@ -170,6 +173,7 @@ footer{
 }
 .logo-footter{
     width: 226px;
+    height: 100%;
 }
 .designcafe-imfo{
     max-width: 1000px;
