@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 </head>
 
@@ -49,9 +50,45 @@
         </ul>
     </nav>
     </div>
+
+    <div class="humberger"><span></span></div>
+    <div>
+    <nav class="sp_nav">
+        <ul>
+            <li>
+                <a href="#about">
+                    ABOUT US
+                </a>
+            </li>
+            <li>
+                <a href="#menu">
+                    MENU
+                </a>
+            </li>
+            <li>
+                <a href="#gallery">
+                    GALLERY
+                </a>
+            </li>
+            <li>
+                <a href="#event">
+                    EVENT
+                </a>
+            </li>
+            <li>
+                <a href="#access">
+                    ACCESS
+                </a>
+            </li>
+        </ul>
+    </nav>
+    </div>
     
     <div class="slider">
+        <picture>
+           <source srcset="./images/sp_main_vs@2x-100.jpg" media="(max-width: 767px)">
         <img src="./images/pc_first-100.jpg" alt="カフェの様子">
+    </picture>
     </div>
     </header>
 
@@ -65,7 +102,10 @@
         <img class="about-img" src="./images/pc_about-100.jpg" alt="私たちについて">
         <div class="about-item">
             <h2 class="about-title">
-                <img src="./images/about_us@2x.png" alt="">
+                <picture>
+                    <source srcset="./images/about_us@2x-100.jpg" media="(max-width767px)">
+                    <img src="./images/about_us@2x.png" alt="">
+                </picture>
             </h2>
             <p class="about-lead">私たちが提供する<br>こだわりのコーヒー</p>
             <p class="about-text">サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。</p>
@@ -96,11 +136,15 @@
     <section id="gallery">
         <img class="gallery-title" src="./images/gallery@2x.png" alt="">
         <div class="slider-img">
+        <picture>
+            <source srcset="./images/mobile_gallery-100.jpg"
+            media="(max-width: 767px)">
         <img src="./images/pc_gallary_01-100.jpg" alt="">
         <img src="./images/pc_gallary_02-100.jpg" alt="">
         <img src="./images/pc_gallary_03-100.jpg" alt="">
         <img src="./images/pc_gallary_04-100.jpg" alt="">
         <img src="./images/pc_gallary_05-100.jpg" alt="">
+        </picture>
     </div>
     </section>
 
@@ -157,4 +201,12 @@
         </div>
         
     </footer>
+    <script>
+        $(function(){
+            $('.humberger').on('click',function(){
+                $('.sp_nav').fadeToggle();
+                $('.humberger').toggleClass('open');
+            });
+        });
+    </script>
 </html>
