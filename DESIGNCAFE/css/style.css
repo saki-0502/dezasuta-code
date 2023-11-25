@@ -124,7 +124,13 @@ h3{
 }
 .slider-img{
     display: flex;
+    width: 100%;
+}
+.slider-img img{
     width: 20%;
+}
+.slider-img picture img{
+    width: 100%;
 }
 #event{
     max-width: 1000px;
@@ -329,7 +335,10 @@ footer{
     .sp_none{
         display: none;
     }
-    .slider-img picture img{
+    .sp_slider_img{
+        width: 100%;
+    }
+    .sp_slider_img img{
         width: 100%;
     }
     h3{
