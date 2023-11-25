@@ -99,17 +99,29 @@
     </section>
 
     <section id="about">
-        <img class="about-img" src="./images/pc_about-100.jpg" alt="私たちについて">
+        <picture class="sp_about_img">
+            <source srcset="./images/about_us@2x-100.jpg" media="(max-width767px)">
+            <img class="about-img" src="./images/pc_about-100.jpg" alt="コーヒー">
+        </picture>
         <div class="about-item">
             <h2 class="about-title">
-                <picture>
-                    <source srcset="./images/about_us@2x-100.jpg" media="(max-width767px)">
                     <img src="./images/about_us@2x.png" alt="">
-                </picture>
             </h2>
             <p class="about-lead">私たちが提供する<br>こだわりのコーヒー</p>
             <p class="about-text">サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。</p>
-         </div>
+        </div>
+    </section>
+
+    <section id="sp_about">
+        <div class="about-item">
+            <h2 class="about-title">
+                <img src="./images/about_us@2x.png" alt="">
+            </h2>
+            <img class="sp_about_img" src="./images/about_us@2x-100.jpg" alt="コーヒー">
+            <p class="about-lead">私たちが提供する<br>こだわりのコーヒー</p>
+            <p class="about-text">サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。</p>
+        </div>
+        
     </section>
 
     <section id="menu">
@@ -136,15 +148,14 @@
     <section id="gallery">
         <img class="gallery-title" src="./images/gallery@2x.png" alt="">
         <div class="slider-img">
-        <picture>
-            <source srcset="./images/mobile_gallery-100.jpg"
-            media="(max-width: 767px)">
-        <img src="./images/pc_gallary_01-100.jpg" alt="">
-        <img src="./images/pc_gallary_02-100.jpg" alt="">
-        <img src="./images/pc_gallary_03-100.jpg" alt="">
-        <img src="./images/pc_gallary_04-100.jpg" alt="">
-        <img src="./images/pc_gallary_05-100.jpg" alt="">
-        </picture>
+             <img src="./images/pc_gallary_01-100.jpg" alt="" class="sp_none">
+             <img src="./images/pc_gallary_02-100.jpg" alt="" class="sp_none">
+             <picture>
+                <source srcset="./images/mobile_gallery-100.jpg" media="(max-width: 767px)">
+                 <img src="./images/pc_gallary_03-100.jpg" alt="">
+             </picture>
+             <img src="./images/pc_gallary_04-100.jpg" alt="" class="sp_none">
+             <img src="./images/pc_gallary_05-100.jpg" alt="" class="sp_none">
     </div>
     </section>
 
