@@ -218,6 +218,20 @@ footer{
 .sp_nav, .humberger{
     display: none;
 }
+.slick-dots li button:before {
+    font-size: 13px;
+    color: #fff;
+}
+.slick-dots li.slick-active button:before{
+    color: #fff;
+}
+.slick-dots {
+    bottom: 0px;
+}
+.slick-prev:before, .slick-next:before {
+    color:aqua;
+    z-index: 30;
+}
 
 @media screen and (max-width:1100px) {
     .lead-text01{
