@@ -229,11 +229,21 @@
                 arrows: false
             });
             //ギャラリースライダー
-            $('.slider-img').slick({
-                autoplaySpeed: 2000,
+            if (window.matchMedia('(max-width: 767px)').matches) {
+                $(".slider-img").slick({
+                    autoplaySpeed: 2000,
+                    slidesToShow: 1,
+                    autoplay: true,
+                });
+            } else if (window.matchMedia('(min-width:768px)').matches) {
+            $(".slider-img").slick({
+                infinite: true,
+                slidesToShow: 5,
                 autoplay: true,
-                arrows: true
+                autoplaySpeed: 2000,
+                arrows: false
             });
+            }            
             // ハンバーガーメニュー
             $('.humberger').on('click',function(){
                 $('.sp_nav').fadeToggle();
