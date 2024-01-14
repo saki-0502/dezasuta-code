@@ -57,18 +57,19 @@ body{
     padding: 0 10px;
     text-align: center;
     margin: 0 auto;
+    align-items: center;
 }
 #sp_about{
     display: none;
 }
 .about-img{
     border-bottom-right-radius: 69px;
-    width: 100%;
+    width: 50%;
 }
 .about-item{
     padding-left: 72px;
     text-align: left;
-    width: 100%;
+    width: 50%;
 }
 .about-title{
     width: 272px;
@@ -98,14 +99,14 @@ body{
     border-top-right-radius: 30px;
     max-width: 1000px;
     margin: 0 auto;
-    width: 300px;
-    height: 200px;
+    width: 100%;
 }
 .menu-item{
     display: flex;
     gap: 48px;
 }
 .menu-item li{
+    width: 30%;
     text-align: left;
 }
 h3{
@@ -133,6 +134,10 @@ h3{
 }
 .slider-img picture img{
     width: 100%;
+}
+.slick-next:before{
+    position: absolute;
+    right: 30px;
 }
 #event{
     max-width: 1000px;
@@ -180,6 +185,7 @@ iframe{
     vertical-align: bottom;
 }
 footer{
+    padding: 0 16px;
     background-color: #fff;
 }
 .footter-item{
@@ -211,9 +217,9 @@ footer{
 }
 .totop{
     position: fixed; 
-    bottom: 20px;
-    right: 20px;
-    width: 125px;
+    bottom: 10px;
+    right: 10px;
+    width: 100px;
 }
 .sp_nav, .humberger{
     display: none;
@@ -228,9 +234,27 @@ footer{
 .slick-dots {
     bottom: 0px;
 }
-.slick-prev:before, .slick-next:before {
-    color:aqua;
-    z-index: 30;
+.slick-next:before {
+    content: "";
+    margin: auto;
+    position: absolute;
+    right: 40px;
+    width: 20px;    
+    height: 20px;   
+    border-top: 3px solid #fff;     
+    border-right: 3px solid #fff;  
+    transform: rotate(45deg);   
+}
+.slick-next:after {
+    content: "";
+    margin: auto;
+    position: absolute;
+    left: -1430px;
+    width: 20px;    
+    height: 20px;   
+    border-top: 3px solid #fff;     
+    border-left: 3px solid #fff;  
+    transform: rotate(-45deg);   
 }
 
 @media screen and (max-width:1100px) {
@@ -365,6 +389,7 @@ footer{
     .menu-item li{
         margin-top: 40px;
         font-size: 20px;
+        width: 100%;
     }
     .menu-img{
         width: 100%;
@@ -395,6 +420,9 @@ footer{
     .event-item li{
         display: block;
         font-size: 16px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     .footter-item{
         display: block;
@@ -407,7 +435,15 @@ footer{
     .designcafe-imfo p{
         font-size: 20px;
     }
-
-    
-    
+    .slick-next:after {
+        content: "";
+        margin: auto;
+        position: absolute;
+        left: -380px;
+        width: 20px;    
+        height: 20px;   
+        border-top: 3px solid #fff;     
+        border-left: 3px solid #fff;  
+        transform: rotate(-45deg);   
+    }
 }

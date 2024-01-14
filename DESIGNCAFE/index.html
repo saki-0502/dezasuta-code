@@ -154,15 +154,35 @@
     <section id="gallery">
         <img class="gallery-title" src="./images/gallery@2x.png" alt="">
         <div class="slider-img">
-             <img src="./images/pc_gallary_01-100.jpg" alt="" class="sp_none">
-             <img src="./images/pc_gallary_01-100.jpg" alt="" class="sp_none">
-             <img src="./images/pc_gallary_02-100.jpg" alt="" class="sp_none">
+             <!--<img src="./images/pc_gallary_01-100.jpg" alt="" class="">
+             <img src="./images/pc_gallary_01-100.jpg" alt="" class="">
+             <img src="./images/pc_gallary_02-100.jpg" alt="" class="">-t-->
+             <picture class="sp_slider_img">
+                <source srcset="./images/pc_gallary_01-100.jpg" media="(max-width: 767px)">
+                 <img src="./images/pc_gallary_01-100.jpg" alt="">
+             </picture>
+             <picture class="sp_slider_img">
+                <source srcset="./images/pc_gallary_02-100.jpg" media="(max-width: 767px)">
+                 <img src="./images/pc_gallary_02-100.jpg" alt="">
+             </picture>
              <picture class="sp_slider_img">
                 <source srcset="./images/mobile_gallery-100.jpg" media="(max-width: 767px)">
                  <img src="./images/pc_gallary_03-100.jpg" alt="">
              </picture>
-             <img src="./images/pc_gallary_04-100.jpg" alt="" class="sp_none">
-             <img src="./images/pc_gallary_05-100.jpg" alt="" class="sp_none">
+             <picture class="sp_slider_img">
+                <source srcset="./images/pc_gallary_04-100.jpg" media="(max-width: 767px)">
+                 <img src="./images/pc_gallary_04-100.jpg" alt="">
+             </picture>
+             <picture class="sp_slider_img">
+                <source srcset="./images/pc_gallary_05-100.jpg" media="(max-width: 767px)">
+                 <img src="./images/pc_gallary_05-100.jpg" alt="">
+             </picture>
+             <picture class="sp_slider_img">
+                <source srcset="./images/pc_gallary_01-100.jpg" media="(max-width: 767px)">
+                 <img src="./images/pc_gallary_01-100.jpg" alt="">
+             </picture>
+             <!--<img src="./images/pc_gallary_04-100.jpg" alt="" class="">
+             <img src="./images/pc_gallary_05-100.jpg" alt="" class="">-->
     </div>
     </section>
 
@@ -220,6 +240,7 @@
         
     </footer>
     <script>
+        $(window).on('load', function(){
         $(function(){
             // スライダー
             $('.slider').slick({
@@ -228,27 +249,45 @@
                 dots: true,
                 arrows: false
             });
-            //ギャラリースライダー
-            if (window.matchMedia('(max-width: 767px)').matches) {
-                $(".slider-img").slick({
-                    autoplaySpeed: 2000,
-                    slidesToShow: 1,
-                    autoplay: true,
-                });
-            } else if (window.matchMedia('(min-width:768px)').matches) {
-            $(".slider-img").slick({
-                infinite: true,
-                slidesToShow: 5,
-                autoplay: true,
+            $('.slider-img').slick({
                 autoplaySpeed: 2000,
-                arrows: false
+                autoplay: true,
+                slidesToShow: 5,
+                dots: false,
+                arrows: true,
+                responsive: [
+
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+            ]
             });
-            }            
+            //ギャラリースライダー
+            //if (window.matchMedia('(max-width: 767px)').matches) {
+                //$(".slider-img").slick({
+                    //autoplaySpeed: 2000,
+                    //slidesToShow: 1,
+                    //autoplay: true,
+                //});
+            //} else if (window.matchMedia('(min-width:768px)').matches) {
+            //$(".slider-img").slick({
+                //infinite: true,
+                //slidesToShow: 5,
+                //autoplay: true,
+                //autoplaySpeed: 2000,
+                //arrows: false
+            //});
+            //}            
             // ハンバーガーメニュー
             $('.humberger').on('click',function(){
                 $('.sp_nav').fadeToggle();
                 $('.humberger').toggleClass('open');
             });
         });
+    });
     </script>
 </html>
