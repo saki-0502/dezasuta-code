@@ -1,0 +1,157 @@
+@charset "utf-8";
+.header_nav ul{
+    display: flex;
+    justify-content: right;
+    gap: 30px;
+}
+.first{
+    background-color: #909090;
+    width: 1500px;
+    height: 1500px;
+    position: absolute;
+    z-index: -9999;
+}
+.logo{
+    color: #fff;
+}
+.header_nav li{
+    color: #fff;
+}
+.concept{
+    font-size: 34px;
+    color: #fff;
+    padding-left: 200px;
+}
+.concept_main{
+    font-size: 56px;
+    color: #fff;
+    text-align: left;
+    padding-left: 200px;
+    padding-top: 20px;
+    margin: 0 auto;
+}
+.concept_text{
+    text-align: left;
+    font-size: 16px;
+    color: #fff;
+    padding-left: 200px;
+    padding-top: 60px;
+    padding-bottom: 20px;
+}
+.scroll{
+    text-align: center;
+    padding-top: 30px;
+    font-size: 22px;
+
+}
+.human_image{
+    align-items: center;
+    margin: 0 auto;
+    width: 572px;
+    height: 873px;
+}
+.to_about{
+    border: solid 5px #333333;
+    width: 50px;
+    border-radius: 50px;
+    padding-left: 850px;
+    padding-bottom: 50px;
+    font-size: 26px;
+}
+.works{
+    text-align: center;
+    font-size: 34px;
+}
+.works_about{
+    text-align: center;
+    padding-top: 30px;
+    font-size: 56px;
+}
+.works_text{
+    text-align: center;
+    padding-top: 78px;
+    padding-bottom: 78px;
+}
+.works_item{
+    display: flex;
+    gap: 50px;
+    padding-top: 78px;
+}
+.works_item li{
+    width: 30%;
+}
+.to_works{
+    border: solid 5px #333333;
+    width: 50px;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+}
+.profile{
+    text-align: center;
+    font-size: 34px;
+    padding-top: 244px;
+}
+.profile_about{
+    text-align: center;
+    font-size: 56px;
+    padding-top: 30px;
+}
+.profile_text{
+    text-align: left;
+    padding-top: 78px;
+    padding-bottom: 78px;
+}
+.profile_item{
+    width: 50%;
+}
+.to_profile{
+    border: solid 5px #333333;
+    width: 50px;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    padding-bottom: 240px;
+}
+.second{
+    background-color: #EFEFEF;
+    width: 831px;
+    height: 432px;
+    background-position: center;
+    z-index: -9999; 
+    margin: 0 auto;
+}
+.contact_container h2{
+    margin-top: -340px;
+    text-align: center;
+    font-size: 34px;   
+}
+.to_contact{
+    border: solid 5px #333333;
+    width: 50px;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.contact_container p{
+    text-align: center;
+    font-size: 16px;
+    margin-top: 50px;
+    margin: 0 auto;
+}
+.totop{
+    position: fixed; 
+    bottom: 10px;
+    right: 10px;
+    width: 178px;
+    height: 286px;
+}
+.footer_planet_image{
+    margin-bottom: -300px;
+}
+.copyright{
+    text-align: center;
+    margin-bottom: 80px;
+}
