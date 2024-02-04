@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ポートフォリオ</title>
     <link rel="stylesheet" href="./css/reset.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
   
 </head>
@@ -75,15 +76,28 @@
         </div>
     </section>
     <div>
-        <p class="scroll">
-            scroll「アナタ。」へ
-        </p>
-        <div class="human_image">
-        <img src="./images/2x/human@2x.png" alt="歩いている人">
+        <p class="scroll">scroll「アナタ。」へ</p>
+        <div class="heart">
+          <p
+            class="js-heartTrigger"
+            data-class01="js-humanFix"
+            data-class02="js-heartSVG"
+          ></p>
+          <div class="js-humanFix cover">
+            <picture>
+              <source
+                srcset="./images/2x/human-sp.svg"
+                media="(max-width: 767px)"
+              />
+              <img src="./images/2x/human-pc.svg" class="js-heartSVG" alt="" />
+            </picture>
+          </div>
         </div>
+      </div>
     </div>
-</div>
-<section id="concept" class="sp">
+
+
+<section id="concept" class="sp" >
     <h2 class="concept">
         concept
     </h2>
@@ -103,7 +117,7 @@
 </section>
 
 <div class="star">
-    <section id="works">
+    <section id="works" data-aos="fade-up" data-aos-duration="3000">
         <h2 class="works">
             works
         </h2>
@@ -112,13 +126,13 @@
         </h3>
              <ul class="works_item">
                  <li>
-                     <img class="works-img" src="./images/2x/works1_img@2x.png" alt="">
+                     <img class="works-img" src="./images/2x/works_img1@2x.png" alt="">
                  </li>
                  <li>
-                     <img class="works-img" src="./images/2x/works2_img@2x.png" alt="">
+                     <img class="works-img" src="./images/2x/works_img2@2x.png" alt="">
                  </li>
                  <li>
-                     <img class="works-img" src="./images/2x/works3_img@2x.png" alt="">
+                     <img class="works-img" src="./images/2x/works_img3@2x.png" alt="">
                  </li>
              </ul>
         <p class="works_text">
@@ -130,7 +144,7 @@
         </div>
     </section>
 
-    <section id="profile">
+    <section id="profile" data-aos="fade-up" data-aos-duration="3000">
         <h2 class="profile">
             profile
         </h2>
@@ -142,7 +156,7 @@
             ヒトと話すことが好きです。そのヒトの好きなモノやこだわりを聞くことはもっと好きです。要望に寄り添い、そのこだわりの世界観を表現したい。
             そこからできた私のデザインを通じて、お客様自身が誇りに思える。自信で満たされる。そんなデザインを作ります。
         </p>
-        <img src="./dezasuta/images/2x/profile_img@2x.png" alt="プロフィール写真">
+        <img src="./images/2x/profile_img@2x.png" alt="プロフィール写真">
         </div>
         <div class="to_profile">
         <a class="btn" href="profile">もっとみる
@@ -150,7 +164,7 @@
         </div>
     </section>
     
-    <section id="contact">
+    <section id="contact" data-aos="fade-up" data-aos-duration="3000">
         <div class="contact_container">
         <h2>
             contact
@@ -178,6 +192,38 @@
     </footer>
 
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
     
+    window.addEventListener('scroll', (e) => {
+  humanFix("js-heartTrigger");
+});
+// humanFix
+// ------------------------------------------------------------
+function humanFix(Class){
+  const targetsClass  = document.getElementsByClassName(Class);
+  const targetsArr    = Array.from(targetsClass);
+  const windowHeight  = window.innerHeight;
+
+
+  targetsArr.forEach(function(target){
+    const targetClass01   = document.getElementsByClassName(target.getAttribute("data-Class01"))[0];
+    const targetClass02   = document.getElementsByClassName(target.getAttribute("data-Class02"))[0];
+    let targetRelative = target.getBoundingClientRect().top;
+    let scale = window.innerWidth >= 768 ?  1 + (-0.008 * (targetRelative)) : 1 + (-0.008 * (targetRelative));
+
+
+    if(scale >= 1){
+      targetClass01.style.position = 'fixed';
+      targetClass02.style.transform = 'scale(' + scale + ')';
+    }else{
+      targetClass01.style.position = 'absolute';
+      targetClass02.style.transform = 'scale(1)';
+    }
+  });
+}
+AOS.init();
+</script>    
 </body>
 </html>

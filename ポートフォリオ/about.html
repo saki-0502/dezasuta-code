@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ポートフォリオ_about</title>
     <link rel="stylesheet" href="./css/reset.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
 
 </head>
@@ -54,13 +55,12 @@
         about        
     </h1>
 
-    <div class="gray_area_about">
+    <div class="gray_area_about" data-aos="fade-up" data-aos-duration="3000">
     <h2 class="about_heading">
         アナタデザインって？
     </h2>
     </div>
 
-    
     <p class="about_lead">
         アナタデザインのアナタには【アナタ自身】と【彼方】という意味を持っています。<br>アナタ自身の持っている素敵なところを見出し、広げたい。<br>
         今、一歩を踏み出そうとしているアナタが自信を持っていただけるようにデザインの力で全力でサポートします。
@@ -111,11 +111,16 @@
         <img src="./images/2x/human_about_img@2x.png" alt="自信のある人">
     </div>
     </div>
+
 <footer>
     <p class="copyright">
          ©アナタデザイン
     </p>
- </footer>    
+ </footer>
+ <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+    AOS.init();
+ </script>
 
+AOS.init();
 </body>
 </html>
