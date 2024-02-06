@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
-  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
     <div class="gray_area">
@@ -51,6 +51,38 @@
         </ul>
     </nav>
     </header>
+    <div class="humberger"><span></span></div>
+    <div>
+    <nav class="sp_nav">
+        <ul>
+            <li>
+                <a href="#concept">
+                    concept
+                </a>
+            </li>
+            <li>
+                <a href="#about">
+                    about
+                </a>
+            </li>
+            <li>
+                <a href="#works">
+                    works
+                </a>
+            </li>
+            <li>
+                <a href="#profile">
+                    profile
+                </a>
+            </li>
+            <li>
+                <a href="#contact">
+                    contact
+                </a>
+            </li>
+        </ul>
+    </nav>
+    </div>
 
 <div class="mainvisual">
     <img src="./images/2x/mainvisual_img@2x.png" alt="人がたくさん並んでいる">
@@ -223,6 +255,10 @@ function humanFix(Class){
     }
   });
 }
+$('.humberger').on('click',function(){
+                $('.sp_nav').fadeToggle();
+                $('.humberger').toggleClass('open');
+            });
 AOS.init();
 </script>    
 </body>
